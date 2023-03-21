@@ -22,3 +22,12 @@ The App Bundle structure is as follows:
     - **libs/**: subdirectory containing shared libraries
     - **resources/**: subdirectory containing icons etc
     - **appinfo**: XML manifest containing the information needed to run the app (App name, main binary, icon, etc)
+
+
+## Requirements
+
+'makeapp' requires **patchelf** in order to ship your App Bundle with *libc* (or other interpreter) in the libs/ subdirectory. By doing this, we can ensure that App Bundles will run on systems with other versions of *libc* etc.
+
+On Debian-based systems, patchelf can be installed with:
+
+`# apt install patchelf`
