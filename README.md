@@ -1,5 +1,5 @@
 # app-bundle-framework
-(WIP) Distro-agnostic, easy, portable *nix App Bundles
+(WIP) Distro-agnostic, easy, portable Linux App Bundles
 
 ## Goals
 The goal is to make universal (distro-agnostic) Linux app deployment as easy as:

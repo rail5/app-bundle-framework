@@ -1,5 +1,5 @@
 # app-bundle-framework
-(WIP) Distro-agnostic, easy, portable *nix App Bundles
+(WIP) Distro-agnostic, easy, portable Linux App Bundles
 
 ## "Hello World" example
 To **build & run** this example App Bundle:
