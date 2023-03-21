@@ -8,4 +8,4 @@ To **build & run** this example App Bundle:
 
 `$ make app`
 
-`$ bash ../runapp.sh ./helloworld.app`
+`$ bash ../runapp ./helloworld.app`
