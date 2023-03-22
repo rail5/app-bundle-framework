@@ -29,11 +29,11 @@ echo "Icon: $appicon"
 
 echo ""
 echo "Setting CWD"
-cd $1
+	cd $1
 echo ""
 echo "Marking as executable"
-chmod +x ./bin/*
-chmod +x ./libs/*
+	chmod +x ./bin/*
+	chmod +x ./libs/*
 echo ""
 echo "Running"
-PATH=$(pwd)/bin:$PATH LD_LIBRARY_PATH="$(pwd)/libs:$LD_LIBRARY_PATH" $appmain
+	PATH=$(pwd)/bin:$PATH LD_LIBRARY_PATH="$(pwd)/libs:$LD_LIBRARY_PATH" $appmain "${@:2}"
