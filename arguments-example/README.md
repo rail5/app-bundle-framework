@@ -6,12 +6,12 @@ This example prints all received command-line arguments to the terminal
 
 For instance:
 
-`$ arguments "one argument" two arguments`
+`$ ./arguments "one argument" two arguments`
 
 Will print:
 
 ```
-arguments
+./arguments
 one argument
 two
 arguments
@@ -25,4 +25,4 @@ To **build & run** this example App Bundle:
 
 `$ make app`
 
-`$ bash ../runapp ./helloworld.app`
+`$ bash ../runapp ./arguments.app`
