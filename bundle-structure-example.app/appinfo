@@ -1,0 +1,4 @@
+<app>
+	<name>hello-world</name>
+	<main>bin/helloworld.sh</main>
+</app>

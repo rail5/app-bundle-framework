@@ -10,7 +10,7 @@ App Bundles include all necessary binaries & shared libraries to run. Running th
 
 `$ runapp program.app`
 
-This is still very much a work-in-progress, and is not anywhere near production-ready (although the current makeapp & runapp scripts **are** usable for basic command-line apps in their current state)
+This is still a work-in-progress, and is not production-ready yet. Currently, this is perfectly usable for basic command-line apps (see 'helloworld-example' and 'arguments-example')
 
 
 ## Structure
@@ -23,6 +23,7 @@ The App Bundle structure is as follows:
     - **resources/**: subdirectory containing icons etc
     - **appinfo**: XML manifest containing the information needed to run the app (App name, main binary, icon, etc)
 
+See 'bundle-structure-example.app' for an example App Bundle (or run `$ make app` on one of the other examples to see what is created)
 
 ## Requirements
 
