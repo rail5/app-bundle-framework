@@ -12,6 +12,7 @@ App Bundles include all necessary binaries & shared libraries to run. Running th
 
 This is still a work-in-progress, and is not fully production-ready yet. Currently, this is perfectly usable for basic command-line apps (see 'helloworld-example' and 'arguments-example')
 
+--
 
 Try making an App Bundle of a program on your computer! For example:
 
