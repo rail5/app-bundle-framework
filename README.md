@@ -10,8 +10,16 @@ App Bundles include all necessary binaries & shared libraries to run. Running th
 
 `$ runapp program.app`
 
-This is still a work-in-progress, and is not production-ready yet. Currently, this is perfectly usable for basic command-line apps (see 'helloworld-example' and 'arguments-example')
+This is still a work-in-progress, and is not fully production-ready yet. Currently, this is perfectly usable for basic command-line apps (see 'helloworld-example' and 'arguments-example')
 
+
+Try making an App Bundle of a program on your computer! For example:
+
+`$ makeapp /usr/bin/htop`
+
+Will (if you have 'htop' installed) make a bundle in the *current working directory* called **htop.app**. This App Bundle can then be shipped to any other Linux system, on its own, and run with:
+
+`$ runapp /location/of/htop.app`
 
 ## Structure
 

@@ -19,13 +19,15 @@ packfile () {
 
 	cp $2 $1.app/bin/
 	
-	interpreter=`readelf -l $1.app/bin/$2 | grep interpreter | grep -oP ": (.*?)]" | head -c -2 | tail -c +3`
+	binary_basename=$(basename $2)
+	
+	interpreter=`readelf -l $1.app/bin/$binary_basename | grep interpreter | grep -oP ": (.*?)]" | head -c -2 | tail -c +3`
 	
 	interpreter_basename=$(basename $interpreter)
 	
 	cp $interpreter $1.app/libs/
 	
-	patchelf --set-interpreter ./libs/$interpreter_basename --set-rpath ./libs/ $1.app/bin/$2
+	patchelf --set-interpreter ./libs/$interpreter_basename --set-rpath ./libs/ $1.app/bin/$binary_basename
 
 }
 
@@ -58,11 +60,13 @@ more_deps () {
 	more_deps $1
 }
 
-packfile $1 $1
+primary_binary_name=$(basename $1)
 
-echo "<app>" > $1.app/appinfo
-echo "	<name>$1</name>" >> $1.app/appinfo
-echo "	<main>bin/$1</main>" >> $1.app/appinfo
-echo "</app>" >> $1.app/appinfo
+packfile $primary_binary_name $1
+
+echo "<app>" > $primary_binary_name.app/appinfo
+echo "	<name>$primary_binary_name</name>" >> $primary_binary_name.app/appinfo
+echo "	<main>bin/$primary_binary_name</main>" >> $primary_binary_name.app/appinfo
+echo "</app>" >> $primary_binary_name.app/appinfo
 
 more_deps $1
